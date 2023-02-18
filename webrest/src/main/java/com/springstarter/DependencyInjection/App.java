@@ -13,13 +13,17 @@ public class App {
 	public static void main(String[] args) {
 		SpringApplication.run(App.class, args);
 
-        PaypalPayment paypal = new PaypalPayment();
-        CreditPayment credit = new CreditPayment();
+        /*Example without @Autowire */
 
-        Order order = new Order(0, paypal);
-        order.processOrder();
-        order.setPayment(credit);
-        order.processOrder();
+        // PaypalPayment paypal = new PaypalPayment();
+        // CreditPayment credit = new CreditPayment();
+
+        // Order order = new Order(0, paypal);
+        // order.processOrder();
+        // order.setPayment(credit);
+        // order.processOrder();
+
+        /*Example with @Autowire */
 	}
 
 }
